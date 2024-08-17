@@ -19,8 +19,10 @@ export default function Cart() {
       })
       .catch(err => {
         alert(result)
-    })
+      })
+      
   }, []);
+  
 
   if (items.length > 0) {
     return (
@@ -40,7 +42,7 @@ export default function Cart() {
   } else {
     return (
       <div className="empty">
-        <span className="material-symbols-outlined">hourglass</span>
+        <span className="material-symbols-outlined">hourglass<progress value={null} /></span>
       </div>
     );
   }
